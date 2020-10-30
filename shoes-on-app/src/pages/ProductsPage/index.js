@@ -5,6 +5,7 @@ import axios from 'axios';
 import { baseUrl } from '../../constants/axios';
 
 import ProductsList from './ProductsList';
+import ProductsFilter from './ProductsFilter';
 
 export default function ProductsPage() {
   const allContext = useContext(GlobalContext);
@@ -23,6 +24,7 @@ export default function ProductsPage() {
 
   return (
     <div>
+      <ProductsFilter />
       <ProductsList />
     </div>
   );

@@ -7,10 +7,8 @@ import SizeAndQuantity from './SizeAndQuantity';
 const ProductsListWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  height: 70vh;
+  height: 60vh;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     /* Chrome */
