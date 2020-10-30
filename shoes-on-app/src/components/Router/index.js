@@ -1,13 +1,15 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
-import ProductsPage from '../pages/ProductsPage';
+import ProductsPage from '../../pages/ProductsPage';
+import NavBar from '../NavBar';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
+          <NavBar />
           <ProductsPage />
         </Route>
 

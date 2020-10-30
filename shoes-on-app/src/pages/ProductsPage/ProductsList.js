@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { GlobalContext } from '../../GlobalContext';
+import { GlobalContext } from '../../components/GlobalContext';
 import styled from 'styled-components';
 
 import SizeAndQuantity from './SizeAndQuantity';

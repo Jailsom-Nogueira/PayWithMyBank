@@ -1,8 +1,8 @@
 import React from 'react';
-import Router from './Router';
+import Router from './components/Router';
 import styled from 'styled-components';
 
-import { GlobalStorage } from './GlobalContext';
+import { GlobalStorage } from './components/GlobalContext';
 
 const AppContainer = styled.div`
   display: flex;
@@ -14,6 +14,7 @@ const AppContainer = styled.div`
 
 const AppWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-height: 80vh;
