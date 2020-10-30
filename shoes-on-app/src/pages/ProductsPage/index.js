@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { GlobalContext } from '../../GlobalContext';
 
 import axios from 'axios';
 import { baseUrl } from '../../constants/axios';
 
+import ProductsList from './ProductsList';
+
 export default function ProductsPage() {
-  const [allProducts, setAllProducts] = useState();
+  const allContext = useContext(GlobalContext);
 
   useEffect(() => {
+    const getProductsList = async () => {
+      try {
+        const response = await axios.get(`${baseUrl}`);
+        allContext.setAllProducts(response.data.results);
+      } catch (err) {
+        alert('Something went wrong, please try again later');
+      }
+    };
     return getProductsList();
   }, []);
 
-  const getProductsList = async () => {
-    try {
-      const response = await axios.get(`${baseUrl}`);
-      setAllProducts(response.data);
-      console.log(response.data);
-    } catch (err) {
-      alert('Something went wrong, please try again later');
-    }
-  };
-
   return (
     <div>
-      <p>Hello World</p>
+      <ProductsList />
     </div>
   );
 }
