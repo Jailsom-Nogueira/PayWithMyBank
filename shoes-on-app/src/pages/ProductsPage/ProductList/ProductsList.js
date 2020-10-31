@@ -12,7 +12,7 @@ import {
 import SizeAndQuantity from '../SizeAndQuantity';
 import { ProgressButton } from '../../../components/Buttons/ProgressButton';
 
-export default function ProductsList() {
+export default function ProductsList(props) {
   const allContext = useContext(GlobalContext);
   const history = useHistory();
 
@@ -55,10 +55,16 @@ export default function ProductsList() {
     setQuantity(event.target.value);
   };
 
+  const filtered =
+    allContext.allProducts &&
+    allContext.allProducts.filter((item) =>
+      item.description.toLowerCase().includes(props.filter.toLowerCase()),
+    );
+
   return (
     <ProductsListWrapper>
-      {allContext.allProducts &&
-        allContext.allProducts.map((product) => {
+      {filtered &&
+        filtered.map((product) => {
           return (
             <ProductCard key={product.id}>
               <img

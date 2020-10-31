@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../components/GlobalContext';
 
 import axios from 'axios';
@@ -7,8 +7,9 @@ import { baseUrl } from '../../constants/axios';
 import ProductsList from './ProductList/ProductsList';
 import ProductsFilter from './ProductsFilter';
 
-export default function ProductsPage() {
+export default function ProductsPage(props) {
   const allContext = useContext(GlobalContext);
+  const [filter, SetFilter] = useState('');
 
   useEffect(() => {
     const getProductsList = async () => {
@@ -22,10 +23,14 @@ export default function ProductsPage() {
     return getProductsList();
   }, []);
 
+  const handleFilter = (event) => {
+    SetFilter(event.target.value);
+  };
+
   return (
     <div>
-      <ProductsFilter />
-      <ProductsList />
+      <ProductsFilter handleFilter={handleFilter} />
+      <ProductsList filter={filter} />
     </div>
   );
 }
