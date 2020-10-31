@@ -8,7 +8,7 @@ const FilterWrapper = styled.div`
   border-bottom: 1px solid #bdbdbd;
   width: 100%;
   padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 const FilterInput = styled.input`

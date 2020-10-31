@@ -17,10 +17,10 @@ const AppWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 5vh;
-  width: 30vw;
+
   height: 90vh;
   background-color: white;
-  padding: 0 8px;
+  padding: 0 2rem;
 `;
 
 function App() {

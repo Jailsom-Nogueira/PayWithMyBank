@@ -5,7 +5,7 @@ export const ProgressButton = styled.button`
   justify-content: center;
   align-items: center;
 
-  width: 100%auto;
+  width: 100%;
   background: #6b8067;
   color: white;
   padding: 1rem 0;
