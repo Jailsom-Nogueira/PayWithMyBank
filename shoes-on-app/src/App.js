@@ -7,9 +7,8 @@ import { GlobalStorage } from './components/GlobalContext';
 const AppContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: lightgray;
-  height: 100vh;
+  height: 812px;
 `;
 
 const AppWrapper = styled.div`
@@ -17,7 +16,9 @@ const AppWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 80vh;
+  margin-top: 5vh;
+  width: 30vw;
+  height: 90vh;
   background-color: white;
   padding: 0 8px;
 `;

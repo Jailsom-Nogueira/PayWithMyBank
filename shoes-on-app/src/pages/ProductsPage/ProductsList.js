@@ -1,14 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../../components/GlobalContext';
+import { useHistory } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import SizeAndQuantity from './SizeAndQuantity';
+import { ProgressButton } from '../../components/Buttons/ProgressButton';
 
 const ProductsListWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  height: 75vh;
 
-  height: 60vh;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     /* Chrome */
@@ -20,21 +23,35 @@ const ProductsListWrapper = styled.div`
 
 export default function ProductsList() {
   const allContext = useContext(GlobalContext);
+  const history = useHistory();
 
   const [size, setSize] = useState('36');
   const [quantity, setQuantity] = useState('0');
 
-  const handleChosenProduct = (productId, productPrice) => {
+  const handleChosenProduct = (
+    productId,
+    productPrice,
+    productDescription,
+    productThumbUrl,
+    productmMaxresURL,
+    productColor,
+  ) => {
     if (!quantity || quantity === '0') {
       alert('Please choose a quantity');
-    }
+    } else {
+      allContext.setChosenProduct({
+        id: productId,
+        description: productDescription,
+        size: size,
+        quantity: quantity,
+        price: Math.floor(productPrice),
+        color: productColor,
+        thumbnailURL: productThumbUrl,
+        MaxresURL: productmMaxresURL,
+      });
 
-    allContext.setChosenProduct({
-      size: size,
-      quantity: quantity,
-      productId: productId,
-      productPrice: productPrice,
-    });
+      history.push('/checkoutpage');
+    }
   };
 
   const handleSize = (event) => {
@@ -46,7 +63,7 @@ export default function ProductsList() {
     event.preventDefault();
     setQuantity(event.target.value);
   };
-  console.log(allContext.chosenProduct);
+
   return (
     <ProductsListWrapper>
       {allContext.allProducts &&
@@ -65,11 +82,21 @@ export default function ProductsList() {
               />
 
               <p>$ {product.price}</p>
-              <button
-                onClick={() => handleChosenProduct(product.id, product.price)}
+
+              <ProgressButton
+                onClick={() =>
+                  handleChosenProduct(
+                    product.id,
+                    product.price,
+                    product.description,
+                    product.thumbnailURL,
+                    product.maxresURL,
+                    product.color,
+                  )
+                }
               >
                 Add to cart
-              </button>
+              </ProgressButton>
             </div>
           );
         })}
