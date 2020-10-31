@@ -4,7 +4,7 @@ import { GlobalContext } from '../../components/GlobalContext';
 import axios from 'axios';
 import { baseUrl } from '../../constants/axios';
 
-import ProductsList from './ProductsList';
+import ProductsList from './ProductList/ProductsList';
 import ProductsFilter from './ProductsFilter';
 
 export default function ProductsPage() {

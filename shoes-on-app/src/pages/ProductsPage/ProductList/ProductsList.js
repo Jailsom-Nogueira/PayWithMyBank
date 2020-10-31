@@ -1,25 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { GlobalContext } from '../../components/GlobalContext';
+import { GlobalContext } from '../../../components/GlobalContext';
 import { useHistory } from 'react-router-dom';
 
-import styled from 'styled-components';
+import {
+  ProductsListWrapper,
+  ProductCard,
+  ProductDescription,
+  ProductPrice,
+} from './styles';
 
-import SizeAndQuantity from './SizeAndQuantity';
-import { ProgressButton } from '../../components/Buttons/ProgressButton';
-
-const ProductsListWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 75vh;
-
-  overflow-y: scroll;
-  ::-webkit-scrollbar {
-    /* Chrome */
-    display: none;
-  }
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-`;
+import SizeAndQuantity from '../SizeAndQuantity';
+import { ProgressButton } from '../../../components/Buttons/ProgressButton';
 
 export default function ProductsList() {
   const allContext = useContext(GlobalContext);
@@ -69,19 +60,20 @@ export default function ProductsList() {
       {allContext.allProducts &&
         allContext.allProducts.map((product) => {
           return (
-            <div key={product.id}>
+            <ProductCard key={product.id}>
               <img
                 src={product.thumbnailURL}
                 alt={`Thumbnail ${product.description}`}
               />
-              <p>{product.description}</p>
+
+              <ProductDescription>{product.description}</ProductDescription>
 
               <SizeAndQuantity
                 handleSize={handleSize}
                 handleQuantity={handleQuantity}
               />
 
-              <p>$ {product.price}</p>
+              <ProductPrice>$ {product.price}</ProductPrice>
 
               <ProgressButton
                 onClick={() =>
@@ -97,7 +89,7 @@ export default function ProductsList() {
               >
                 Add to cart
               </ProgressButton>
-            </div>
+            </ProductCard>
           );
         })}
     </ProductsListWrapper>

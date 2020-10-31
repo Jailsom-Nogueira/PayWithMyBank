@@ -1,10 +1,33 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SizeAndQuantityContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #8d8d8d;
+
+  select {
+    border: 0.900966px solid #e8e8e8;
+    box-sizing: border-box;
+    border-radius: 25.2271px;
+    padding: 0.3rem 0.6rem;
+    color: #8d8d8d;
+  }
+`;
 
 const sizes = [36, 37, 38, 39, 40, 41, 42, 43];
 
 export default function SizeAndQuantity(props) {
   return (
-    <div>
+    <SizeAndQuantityContainer>
       <p>Size</p>
       <select name="sizes" id="sizes" onChange={props.handleSize}>
         {sizes.map((size) => {
@@ -21,6 +44,6 @@ export default function SizeAndQuantity(props) {
         <option value="0">0</option>
         <option value="1">1</option>;
       </select>
-    </div>
+    </SizeAndQuantityContainer>
   );
 }
