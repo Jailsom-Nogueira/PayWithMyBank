@@ -11,8 +11,6 @@ const FilterWrapper = styled.div`
   margin-bottom: 0.5rem;
 `;
 
-const SearchIcon = styled.img``;
-
 const FilterInput = styled.input`
   width: 80%;
   border: none;
@@ -26,7 +24,7 @@ const FilterInput = styled.input`
 export default function ProductsFilter() {
   return (
     <FilterWrapper>
-      <SearchIcon src={searchIcon} alt="Search Icon" />
+      <img src={searchIcon} alt="Search Icon" />
       <FilterInput placeholder={'Search for your sneaker'} />
     </FilterWrapper>
   );
