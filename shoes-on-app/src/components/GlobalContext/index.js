@@ -3,7 +3,7 @@ import React, { useState, createContext } from 'react';
 export const GlobalContext = createContext();
 
 export const GlobalStorage = ({ children }) => {
-  const [allProducts, setAllProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState();
   const [chosenProduct, setChosenProduct] = useState('');
 
   return (

@@ -2,9 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../components/GlobalContext';
 import { useHistory } from 'react-router-dom';
 
-import axios from 'axios';
-import { payWithMyBankUrl } from '../../constants/axios';
-
 import {
   CheckoutWrapper,
   CheckoutTittle,

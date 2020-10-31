@@ -21,11 +21,14 @@ const FilterInput = styled.input`
   }
 `;
 
-export default function ProductsFilter() {
+export default function ProductsFilter(props) {
   return (
     <FilterWrapper>
       <img src={searchIcon} alt="Search Icon" />
-      <FilterInput placeholder={'Search for your sneaker'} />
+      <FilterInput
+        placeholder={'Search for your sneaker'}
+        onChange={props.handleFilter}
+      />
     </FilterWrapper>
   );
 }
