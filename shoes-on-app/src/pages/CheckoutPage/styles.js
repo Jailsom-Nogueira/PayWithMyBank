@@ -13,10 +13,12 @@ export const CheckoutWrapper = styled.div`
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 `;
+
 export const CheckoutTittle = styled.p`
   font-size: 23.93px;
   margin-bottom: 0.55rem;
 `;
+
 export const ProductCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1.7fr 0.3fr;
@@ -31,6 +33,7 @@ export const ProductCard = styled.div`
   border-radius: 9.02222px;
   padding: 0.85rem;
 `;
+
 export const Photo = styled.div`
   grid-area: photo;
   width: 8vw;
@@ -53,6 +56,7 @@ export const Photo = styled.div`
     margin-left: -120px;
   }
 `;
+
 export const Total = styled.div`
   grid-area: total;
   height: auto;
@@ -71,6 +75,7 @@ export const Total = styled.div`
     }
   }
 `;
+
 export const Delete = styled.div`
   grid-area: delete;
   img {
@@ -78,6 +83,7 @@ export const Delete = styled.div`
     cursor: pointer;
   }
 `;
+
 export const Amount = styled.div`
   grid-area: amount;
   height: auto;
@@ -90,6 +96,7 @@ export const Amount = styled.div`
     line-height: 36.09px;
   }
 `;
+
 export const Description = styled.div`
   grid-area: description;
 
@@ -104,6 +111,7 @@ export const Description = styled.div`
     }
   }
 `;
+
 export const Delivery = styled.div`
   grid-area: delivery;
 

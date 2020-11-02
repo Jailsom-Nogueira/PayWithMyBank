@@ -5,6 +5,7 @@ import NavBar from '../NavBar';
 import ProductsPage from '../../pages/ProductsPage';
 import CheckoutPage from '../../pages/CheckoutPage';
 import SelectBankPage from '../../pages/SelectBankPage';
+import ReceiptPage from '../../pages/ReceiptPage';
 
 export default function Router() {
   return (
@@ -23,6 +24,11 @@ export default function Router() {
         <Route exact path="/selectbankpage">
           <NavBar />
           <SelectBankPage />
+        </Route>
+
+        <Route exact path="/receiptpage">
+          <NavBar />
+          <ReceiptPage />
         </Route>
 
         <Route path="/">

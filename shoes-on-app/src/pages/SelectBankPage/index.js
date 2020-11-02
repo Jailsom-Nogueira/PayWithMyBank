@@ -53,7 +53,6 @@ export default function SelectBankPage() {
         if (event) {
           if (command === 'event' && event.type === 'new_location') {
             if (event.data.indexOf('#success') === 0) {
-              alert('success!');
               history.push('/receiptpage');
             } else {
               alert('cancel!');
