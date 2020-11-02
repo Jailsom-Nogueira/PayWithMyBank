@@ -4,6 +4,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import NavBar from '../NavBar';
 import ProductsPage from '../../pages/ProductsPage';
 import CheckoutPage from '../../pages/CheckoutPage';
+import SelectBankPage from '../../pages/SelectBankPage';
 
 export default function Router() {
   return (
@@ -17,6 +18,11 @@ export default function Router() {
         <Route exact path="/checkoutpage">
           <NavBar />
           <CheckoutPage />
+        </Route>
+
+        <Route exact path="/selectbankpage">
+          <NavBar />
+          <SelectBankPage />
         </Route>
 
         <Route path="/">
