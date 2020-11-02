@@ -35,7 +35,7 @@ export default function ProductsList(props) {
         description: productDescription,
         size: size,
         quantity: quantity,
-        price: Math.floor(productPrice),
+        price: productPrice,
         color: productColor,
         thumbnailURL: productThumbUrl,
         MaxresURL: productmMaxresURL,

@@ -35,12 +35,16 @@ export default function CheckoutPage() {
     history.push('/');
   };
 
+  const goToSelectBankPage = () => {
+    history.push('/selectbankpage');
+  };
+
   return (
     <CheckoutWrapper>
       <CheckoutTittle>Checkout</CheckoutTittle>
       <ProductCard>
         <Photo>
-          <img src={product.MaxresURL} alt={`Product Thumbnail`} />
+          <img src={product.MaxresURL} alt={`Product`} />
         </Photo>
 
         <Total>
@@ -57,7 +61,7 @@ export default function CheckoutPage() {
         </Delete>
 
         <Amount>
-          <p>${product.price}</p>
+          <p>${Math.floor(product.price)}</p>
         </Amount>
 
         <Description>
@@ -70,7 +74,7 @@ export default function CheckoutPage() {
 
         <Delivery>
           <p>Delivery details</p>
-          <p>John Smith</p>
+          <p>Jay Nogueira</p>
           <p>Phone no:+5527995792112</p>
           <p>Adress: Guarapari City, 29216-080</p>
         </Delivery>
@@ -78,7 +82,7 @@ export default function CheckoutPage() {
 
       <PaymentMethods />
 
-      <ProgressButton>Continue</ProgressButton>
+      <ProgressButton onClick={goToSelectBankPage}>Continue</ProgressButton>
     </CheckoutWrapper>
   );
 }
