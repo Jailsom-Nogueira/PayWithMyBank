@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../components/GlobalContext';
 import { useHistory } from 'react-router-dom';
 
@@ -22,6 +22,8 @@ export default function CheckoutPage() {
   const allContext = useContext(GlobalContext);
   const history = useHistory();
 
+  const [chosenPaymentMethod, setChosenPaymentMethod] = useState('onlineBanks');
+
   const product = allContext.chosenProduct;
 
   useEffect(() => {
@@ -30,13 +32,21 @@ export default function CheckoutPage() {
     }
   }, [history, allContext.chosenProduct]);
 
+  const handlePaymentMethod = (paymentMethod) => {
+    setChosenPaymentMethod(paymentMethod);
+  };
+
   const handleDeleteProduct = () => {
     allContext.setChosenProduct(null);
     history.push('/');
   };
 
   const goToSelectBankPage = () => {
-    history.push('/selectbankpage');
+    if (chosenPaymentMethod === 'onlineBanks') {
+      history.push('/selectbankpage');
+    } else {
+      alert('Unsupported payment method, please use "Online banking"');
+    }
   };
 
   return (
@@ -80,7 +90,7 @@ export default function CheckoutPage() {
         </Delivery>
       </ProductCard>
 
-      <PaymentMethods />
+      <PaymentMethods handlePaymentMethod={handlePaymentMethod} />
 
       <ProgressButton onClick={goToSelectBankPage}>Continue</ProgressButton>
     </CheckoutWrapper>
