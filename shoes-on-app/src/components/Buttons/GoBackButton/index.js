@@ -43,7 +43,9 @@ export default function GoBackButton() {
   };
 
   const showGoBackButton =
-    location === '/checkoutpage' || location === '/receiptpage' ? (
+    location === '/checkoutpage' ||
+    location === '/receiptpage' ||
+    location === '/selectbankpage' ? (
       <GoBackButtonWrapper onClick={handleGoBackButton}>
         <img src={arrowPointLeft} alt={`Arrow point to left`} />
         <p>Back</p>

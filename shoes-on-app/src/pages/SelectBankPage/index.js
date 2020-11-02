@@ -55,7 +55,7 @@ export default function SelectBankPage() {
             if (event.data.indexOf('#success') === 0) {
               history.push('/receiptpage');
             } else {
-              alert('cancel!');
+              alert('Transaction canceled');
             }
             return false;
           }
