@@ -20,7 +20,10 @@ export const ProgressButton = styled.button`
 
   cursor: pointer;
 
-  &:hover {
-    border: 1px solid lightgray;
+  &:hover,
+  :focus,
+  :active {
+    outline: 1px solid #63b55c;
+    border-radius: 2.7029px;
   }
 `;
