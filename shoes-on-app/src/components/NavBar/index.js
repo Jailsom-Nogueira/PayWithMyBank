@@ -14,10 +14,14 @@ const NavBarContainer = styled.div`
 `;
 
 export default function NavBar() {
+  const mql = window.matchMedia('(min-width: 600px)');
+  const mobileView = mql.matches;
+  const pageName = mobileView ? <p>Checkout</p> : <div></div>;
+
   return (
     <NavBarContainer>
       <GoBackButton />
-
+      {pageName}
       <UserAvatar />
     </NavBarContainer>
   );

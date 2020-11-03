@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const SizeAndQuantityContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 90%;
   padding: 0 1rem;
 
   font-style: normal;
