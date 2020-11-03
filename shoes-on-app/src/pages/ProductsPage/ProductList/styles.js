@@ -4,7 +4,7 @@ export const ProductsListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 75vh;
+  height: 85vh;
 
   overflow-y: scroll;
   ::-webkit-scrollbar {
@@ -18,30 +18,27 @@ export const ProductsListWrapper = styled.div`
 export const ProductCard = styled.div`
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
+  width: 80vw;
+  margin: 0 auto;
 `;
 
 export const ProductDescription = styled.div`
   margin: 1rem 0;
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 18px;
-  /* or 88% */
 
   text-align: center;
-
-  color: #000000;
 `;
+
 export const ProductPrice = styled.div`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 21px;
   line-height: 18px;
-  /* or 84% */
 
   text-align: center;
   color: #000000;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 `;

@@ -7,7 +7,7 @@ import { baseUrl } from '../../constants/axios';
 import ProductsList from './ProductList/ProductsList';
 import ProductsFilter from './ProductsFilter';
 
-export default function ProductsPage(props) {
+export default function ProductsPage() {
   const allContext = useContext(GlobalContext);
   const [filter, SetFilter] = useState('');
 

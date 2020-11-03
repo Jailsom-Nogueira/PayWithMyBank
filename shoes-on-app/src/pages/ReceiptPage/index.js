@@ -37,9 +37,11 @@ export default function ReceiptPage() {
 
       <OrderSummaryCard>
         <OrderSummaryTittle>Order summary</OrderSummaryTittle>
+
         <Photo>
           <img src={product.MaxresURL} alt={`Product`} />
         </Photo>
+
         <Description>
           <p>{product.description}</p>
           <p>
@@ -62,6 +64,7 @@ export default function ReceiptPage() {
             <p>Total cost</p>
             <p>Delivery included</p>
           </div>
+
           <div>
             <p>${Math.floor(product.price)}</p>
           </div>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ReceiptPageContainer = styled.div`
+  width: 95%;
   flex-grow: 1;
 `;
 
@@ -11,9 +12,9 @@ export const ReceiptTittle = styled.p`
 
 export const OrderSummaryCard = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr;
   grid-template-rows: 0.3fr 1fr;
-  gap: 0px 0px;
+  gap: 0.5rem 0;
   grid-template-areas:
     'tittle tittle'
     'photo description';
@@ -21,13 +22,11 @@ export const OrderSummaryCard = styled.div`
   background: #f7f7f7;
   border-radius: 9.02222px;
   padding: 0.85rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 export const OrderSummaryTittle = styled.div`
   grid-area: tittle;
-
-  font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -36,12 +35,12 @@ export const OrderSummaryTittle = styled.div`
 
 export const Photo = styled.div`
   grid-area: photo;
-
-  width: 6vw;
-  height: 6vw;
+  width: 24vw;
+  height: 26vw;
   border-radius: 9.02222px;
-  overflow: hidden;
   margin-right: 0.55rem;
+  position: relative;
+  overflow: hidden;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   :-webkit-scrollbar {
@@ -51,21 +50,26 @@ export const Photo = styled.div`
   scrollbar-width: none; /* Firefox */
 
   img {
-    width: 20vw;
-    height: auto;
-    margin-top: -55px;
-    margin-left: -120px;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    width: 50vw;
   }
 `;
 
 export const Description = styled.div`
   grid-area: description;
+  margin-top: 1rem;
 
   p {
     &:first-child {
-      font-weight: 600;
+      font-weight: 400;
     }
     &:not(:first-child) {
+      font-family: Arial;
       color: #a5a5a5;
       font-size: 13.16px;
       font-weight: 400;
@@ -79,11 +83,10 @@ export const PaymentMethodCard = styled.div`
   background: #f7f7f7;
   border-radius: 9.02222px;
   padding: 0.85rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 export const PaymentMethodTittle = styled.p`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -94,10 +97,10 @@ export const PaymentMethodType = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #d6d6d6;
-  padding: 0.5rem 0 1rem 0;
+  padding: 0.5rem 0 2rem 0;
 
   p {
-    font-family: Open Sans;
+    margin-left: 0.5rem;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
@@ -108,7 +111,7 @@ export const PaymentMethodType = styled.div`
 export const PaymentMethodTotal = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   div {
     &:first-of-type {
@@ -117,12 +120,19 @@ export const PaymentMethodTotal = styled.div`
     }
     p {
       &:first-child {
-        font-weight: 600;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16.3135px;
+        line-height: 20px;
       }
       &:not(:first-child) {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16.3135px;
+        line-height: 20px;
+
         color: #a5a5a5;
-        font-size: 13.16px;
-        font-weight: 400;
       }
     }
   }
@@ -135,9 +145,10 @@ export const PaymentMethodTotal = styled.div`
 
       p {
         float: right;
-        font-weight: 700;
-        font-size: 36.09px;
-        line-height: 36.09px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50.5px;
+        line-height: 44px;
       }
     }
   }

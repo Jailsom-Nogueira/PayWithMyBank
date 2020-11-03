@@ -4,9 +4,8 @@ import styled from 'styled-components';
 const SizeAndQuantityContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 1rem;
 
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -20,6 +19,12 @@ const SizeAndQuantityContainer = styled.div`
     border-radius: 25.2271px;
     padding: 0.3rem 0.6rem;
     color: #8d8d8d;
+
+    &:focus {
+      border: 1px solid #63b55c;
+      border-radius: 25.2271px;
+      outline: none;
+    }
   }
 `;
 
