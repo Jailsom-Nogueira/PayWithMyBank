@@ -6,7 +6,7 @@ import searchIcon from '../../assets/images/searchIcon.svg';
 const FilterWrapper = styled.div`
   display: flex;
   border-bottom: 1px solid #bdbdbd;
-  width: 100%;
+  width: 90vw;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 `;

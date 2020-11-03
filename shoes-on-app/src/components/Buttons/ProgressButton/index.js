@@ -8,9 +8,10 @@ export const ProgressButton = styled.button`
   width: 100%;
   background: #6b8067;
   color: white;
-  padding: 1rem 0;
+  padding: 0.6rem 0;
   margin-bottom: 1rem;
 
+  font-style: normal;
   font-size: 14px;
   line-height: 19px;
   text-align: center;

@@ -4,6 +4,7 @@ export const CheckoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 0.55rem;
 
   overflow-y: scroll;
   ::-webkit-scrollbar {
@@ -15,7 +16,10 @@ export const CheckoutWrapper = styled.div`
 `;
 
 export const CheckoutTittle = styled.p`
-  font-size: 23.93px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23.9328px;
+  line-height: 33px;
   margin-bottom: 0.55rem;
 `;
 
@@ -36,11 +40,12 @@ export const ProductCard = styled.div`
 
 export const Photo = styled.div`
   grid-area: photo;
-  width: 8vw;
-  height: 10vw;
+  width: 24vw;
+  height: 26vw;
   border-radius: 9.02222px;
-  overflow: hidden;
   margin-right: 0.55rem;
+  position: relative;
+  overflow: hidden;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   :-webkit-scrollbar {
@@ -50,10 +55,13 @@ export const Photo = styled.div`
   scrollbar-width: none; /* Firefox */
 
   img {
-    width: 25vw;
-    height: auto;
-    margin-top: -40px;
-    margin-left: -120px;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    width: 50vw;
   }
 `;
 
@@ -69,9 +77,13 @@ export const Total = styled.div`
       line-height: 16.24px;
     }
     &:not(:first-child) {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13.5333px;
+      line-height: 16px;
+
       color: #a5a5a5;
-      font-size: 13.16px;
-      font-weight: 400;
     }
   }
 `;
@@ -102,12 +114,19 @@ export const Description = styled.div`
 
   p {
     &:first-child {
-      font-weight: 600;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18.0444px;
+      line-height: 16px;
     }
     &:not(:first-child) {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14.4356px;
+      line-height: 21px;
+
       color: #a5a5a5;
-      font-size: 13.16px;
-      font-weight: 400;
     }
   }
 `;
@@ -115,14 +134,23 @@ export const Description = styled.div`
 export const Delivery = styled.div`
   grid-area: delivery;
 
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13.16px;
+  line-height: 135.8%;
+
+  letter-spacing: 0.612903px;
+
   p {
     &:first-child {
-      font-weight: 600;
+      color: #212121;
     }
     &:not(:first-child) {
-      color: #a5a5a5;
-      font-size: 13.16px;
+      font-size: 12.16px;
       font-weight: 400;
+
+      color: #a5a5a5;
     }
   }
 `;
@@ -130,8 +158,7 @@ export const Delivery = styled.div`
 export const PaymentMethodWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  margin-top: 0.85rem;
+  margin: 0.85rem 0;
   background-color: #f7f7f7;
   border-radius: 9.02222px;
   padding: 0.85rem;
@@ -139,6 +166,7 @@ export const PaymentMethodWrapper = styled.div`
 
 export const PaymentMethodTittle = styled.p`
   margin-top: 1rem;
+  font-style: normal;
   font-weight: normal;
   font-size: 16.9328px;
   line-height: 23px;
@@ -180,6 +208,8 @@ export const PaymentMethodItem = styled.button`
 
   p {
     &:first-child {
+      font-style: normal;
+      font-weight: normal;
       font-size: 13.5333px;
       line-height: 18px;
 
@@ -189,7 +219,6 @@ export const PaymentMethodItem = styled.button`
 `;
 
 export const DiscountAdd = styled.p`
-  color: #9e7d27;
   font-weight: bold;
   font-size: 9.77px;
   line-height: 10px;
@@ -198,6 +227,8 @@ export const DiscountAdd = styled.p`
   background-color: #ffcc00;
   padding: 3px 6px;
   display: inline-block;
+
+  color: #9e7d27;
 `;
 
 export const OnlineBanksBanner = styled.div`

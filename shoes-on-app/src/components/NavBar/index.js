@@ -10,8 +10,7 @@ const NavBarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.55rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 `;
 
 export default function NavBar() {

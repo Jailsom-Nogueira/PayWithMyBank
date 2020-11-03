@@ -5,8 +5,10 @@ import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SelectBankPageContainer = styled.div`
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
-  width: 100%;
+  width: 95%;
 `;
 
 export default function SelectBankPage() {
