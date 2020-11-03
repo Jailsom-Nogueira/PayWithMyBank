@@ -39,7 +39,11 @@ export default function GoBackButton() {
   const location = locationUrl.pathname;
 
   const handleGoBackButton = () => {
-    history.goBack();
+    if (location !== '/receiptpage') {
+      history.goBack();
+    } else {
+      history.push('/');
+    }
   };
 
   const showGoBackButton =

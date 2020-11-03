@@ -7,7 +7,7 @@ export const ReceiptPageContainer = styled.div`
 
 export const ReceiptTittle = styled.p`
   font-size: 23.93px;
-  margin-bottom: 1rem;
+  margin: 1rem 0 2rem 0;
 `;
 
 export const OrderSummaryCard = styled.div`
