@@ -6,13 +6,14 @@ import searchIcon from '../../assets/images/searchIcon.svg';
 const FilterWrapper = styled.div`
   display: flex;
   border-bottom: 1px solid #bdbdbd;
-  width: 90vw;
+  width: 100%;
+  margin: 0 auto;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 `;
 
 const FilterInput = styled.input`
-  width: 80%;
+  width: 100%;
   border: none;
   margin-left: 3.5rem;
 

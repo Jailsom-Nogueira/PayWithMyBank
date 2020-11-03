@@ -1,11 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../components/GlobalContext';
+import styled from 'styled-components';
 
 import axios from 'axios';
 import { baseUrl } from '../../constants/axios';
 
 import ProductsList from './ProductList/ProductsList';
 import ProductsFilter from './ProductsFilter';
+
+export const ProductsPageContainer = styled.div`
+  width: 100%;
+`;
 
 export default function ProductsPage() {
   const allContext = useContext(GlobalContext);
@@ -28,9 +33,9 @@ export default function ProductsPage() {
   };
 
   return (
-    <div>
+    <ProductsPageContainer>
       <ProductsFilter handleFilter={handleFilter} />
       <ProductsList filter={filter} />
-    </div>
+    </ProductsPageContainer>
   );
 }
