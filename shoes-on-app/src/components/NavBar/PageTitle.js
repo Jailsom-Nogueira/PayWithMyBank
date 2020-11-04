@@ -20,6 +20,7 @@ export default function Pagetitle() {
   useEffect(() => {
     const location = locationUrl.pathname;
     const expr = location;
+
     switch (expr) {
       case '/':
         setPageTitle('Sneakers');

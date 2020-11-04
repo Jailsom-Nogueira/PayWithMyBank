@@ -26,7 +26,7 @@ export default function ProductsPage() {
       }
     };
     return getProductsList();
-  }, []);
+  }, [allContext]);
 
   const handleFilter = (event) => {
     SetFilter(event.target.value);
