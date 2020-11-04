@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import UserAvatar from './UserAvatar';
 
 import GoBackButton from '../../components/Buttons/GoBackButton';
+import Pagetitle from './PageTitle';
 
 const NavBarContainer = styled.div`
   display: flex;
@@ -16,12 +17,12 @@ const NavBarContainer = styled.div`
 export default function NavBar() {
   const mql = window.matchMedia('(min-width: 600px)');
   const mobileView = mql.matches;
-  const pageName = mobileView ? <p>Checkout</p> : <div></div>;
+  const pageTitle = mobileView ? <Pagetitle /> : <div></div>;
 
   return (
     <NavBarContainer>
       <GoBackButton />
-      {pageName}
+      {pageTitle}
       <UserAvatar />
     </NavBarContainer>
   );
