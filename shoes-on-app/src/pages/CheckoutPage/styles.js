@@ -5,6 +5,7 @@ export const CheckoutWrapper = styled.div`
   flex-direction: column;
   flex-grow: 1;
   padding: 0.55rem;
+  margin-bottom: 1rem;
 
   overflow-y: scroll;
   ::-webkit-scrollbar {

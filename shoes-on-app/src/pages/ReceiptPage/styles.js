@@ -136,13 +136,13 @@ export const PaymentMethodTotal = styled.div`
       }
     }
   }
+
   div {
     &:nth-of-type(2) {
       height: auto;
       width: 100%;
       text-align: center;
       padding-top: 0.5rem;
-
       p {
         float: right;
         font-style: normal;

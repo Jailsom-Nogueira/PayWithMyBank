@@ -17,6 +17,7 @@ const NavBarContainer = styled.div`
 export default function NavBar() {
   const mql = window.matchMedia('(min-width: 600px)');
   const mobileView = mql.matches;
+
   const pageTitle = mobileView ? <Pagetitle /> : <div></div>;
 
   return (

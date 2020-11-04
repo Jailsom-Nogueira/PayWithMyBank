@@ -42,6 +42,7 @@ export const AppWrapper = styled.div`
     padding: 0.55rem;
     margin: 0;
   }
+
   @media (min-width: 414px) {
     max-width: 1300px;
     height: 100vh;

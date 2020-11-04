@@ -69,7 +69,7 @@ export default function SelectBankPage() {
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [history, product.price]);
 
   return (
     <SelectBankPageContainer>

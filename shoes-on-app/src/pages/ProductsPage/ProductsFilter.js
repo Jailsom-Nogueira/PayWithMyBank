@@ -26,6 +26,7 @@ export default function ProductsFilter(props) {
   return (
     <FilterWrapper>
       <img src={searchIcon} alt="Search Icon" />
+
       <FilterInput
         placeholder={'Search for your sneaker'}
         onChange={props.handleFilter}
