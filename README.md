@@ -37,7 +37,7 @@ The challenge:
 - Javascript, HTML, CSS.
 
 ## Framework:
-# React, only functional components with hooks.
+### React, only functional components with hooks.
 - useState and useContext for state control;
 - useLocation for conditional rendering based on the page;
 - useHistory and React Router for navigaton;
@@ -55,7 +55,7 @@ Wath could be better:
 
 To test this project you will need node installed. Clone this repository, install dependencies (npm i), run the code (code .), and check in the browser (npm start).
 
-Thank you for this opportunity!
+Thank you for this opportunity! ❤
 
 Best regards
 Jailsom Nogueira - Jay
