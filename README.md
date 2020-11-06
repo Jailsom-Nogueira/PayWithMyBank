@@ -8,39 +8,39 @@ The challenge:
 
 # Usability flow 
 ### First page, Products:
-- User can filter products by name(case insensitive);
+- User can filter products by name (case insensitive);
 - Choose one of the products;
-- Choose it`s size;
-- Button "Add to cart" takes the app to next page.
+- Choose its size;
+- Button "Add to cart" takes the app to the next page.
 
 ### Second page, Checkout:
-- It`s shown the details about the chosen product;
+- The details about the chosen product are shown;
 - User can delete this product from the cart and start over;
-- For payments methods, user can only chose "Online banking" in this app;
-- If user tries a diferent payment method, a alert will pop in the screen;
-- Button "Confirm" takes the app to the next page.
+- For the payments methods, user can only chose "Online banking" in this app;
+- If user tries a different payment method, an alert will pop-up on the screen;
+- "Confirm" button takes the app to the next page.
 
 ### Third page, Bank Selection:
 - When page is mounted, a SDK is authenticated and a server-side function is called;
-- Now the user is interacting with a external application(PayWithMyBank);
-- If the transaction is conluded, it will take the user to the final page;
-- If not, one alert will pop in the screen and user can choose a bank again or go back.
+- Now the user is interacting with a external application (PayWithMyBank);
+- If the transaction is concluded, it will take the user to the final page;
+- If not, one alert will pop-up on the screen and the user can choose a bank again or go back.
 
 ### Final page, Receipt:
 - User can see the order summary;
 - Payment method used;
-- Total amout;
+- Total amount;
 - User can go back to first page;
-- Place order is not implemented.
+- Place order button is not implemented.
 
-## Tecnologies:
+## Technologies:
 - Javascript, HTML, CSS.
 
 ## Framework:
 ### React, only functional components with hooks.
 - useState and useContext for state control;
 - useLocation for conditional rendering based on the page;
-- useHistory and React Router for navigaton;
+- useHistory and React Router for navigation;
 - useEffect for component lifecycle control.
 
 Libraries:
@@ -48,8 +48,8 @@ Libraries:
 - React Router.
 
 The challenges:
-- Integration with the SDK proved a nice challenge.
-Wath could be better:
+- Integration with the SDK was a nice challenge.
+What could be better:
 - Tests;
 - Desktop responsiveness.
 
